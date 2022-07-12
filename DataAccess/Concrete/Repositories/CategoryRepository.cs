@@ -20,6 +20,11 @@ namespace DataAccess.Concrete.Repositories
             context.SaveChanges();
         }
 
+        public Category Get(Expression<Func<Category, bool>> fillter)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(Category category)
         {
             _object.Add(category);

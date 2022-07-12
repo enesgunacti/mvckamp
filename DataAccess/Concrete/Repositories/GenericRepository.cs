@@ -24,6 +24,11 @@ namespace DataAccess.Concrete.Repositories
             context.SaveChanges();
         }
 
+        public T Get(Expression<Func<T, bool>> fillter)
+        {
+            return _object.SingleOrDefault(fillter);
+        }
+
         public void Insert(T entity)
         {
             _object.Add(entity);

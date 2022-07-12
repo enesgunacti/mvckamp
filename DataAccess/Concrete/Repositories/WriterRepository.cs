@@ -19,6 +19,11 @@ namespace DataAccess.Concrete.Repositories
             throw new NotImplementedException();
         }
 
+        public Writer Get(Expression<Func<Writer, bool>> fillter)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(Writer entity)
         {
             throw new NotImplementedException();
