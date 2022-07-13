@@ -14,6 +14,7 @@ namespace ASPNETGELISTIRMEKAMP.Controllers
     public class WriterController : Controller
     {
         WriterManager writerManager = new WriterManager(new EfWriterDal());
+        WriterValidator writerValidator = new WriterValidator();
         public ActionResult Index()
         {
             var writerValues = writerManager.GetList();
@@ -28,7 +29,7 @@ namespace ASPNETGELISTIRMEKAMP.Controllers
         [HttpPost]
         public ActionResult AddWriter(Writer writer)
         {
-            WriterValidator writerValidator = new WriterValidator();
+
             ValidationResult validationResult = writerValidator.Validate(writer);
             if (validationResult.IsValid)
             {
@@ -44,5 +45,31 @@ namespace ASPNETGELISTIRMEKAMP.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public ActionResult EditWriter(int id)
+        {
+            var writerValue = writerManager.GetWriterById(id);
+            return View(writerValue);
+        }
+        [HttpPost]
+        public ActionResult EditWriter(Writer writer)
+        {
+            ValidationResult validationResult = writerValidator.Validate(writer);
+            if (validationResult.IsValid)
+            {
+                writerManager.WriterUpdate(writer);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in validationResult.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+        }
+
     }
 }
