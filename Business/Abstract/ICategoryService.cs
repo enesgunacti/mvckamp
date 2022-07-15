@@ -10,11 +10,8 @@ namespace Business.Abstract
     public interface ICategoryService
     {
         List<Category> GetCategoryList();
-
         void AddCategoryBL(Category category);
-
         Category GetById(int id);
-
         void CategoryDelete(Category category);
         void CategoryUpdate(Category category);
     }

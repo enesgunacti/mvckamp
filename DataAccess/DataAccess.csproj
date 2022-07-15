@@ -80,6 +80,22 @@
     <Compile Include="Migrations\202207131753090_writer_title_add.designer.cs">
       <DependentUpon>202207131753090_writer_title_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207150150399_mig_writer_image_size.cs" />
+    <Compile Include="Migrations\202207150150399_mig_writer_image_size.designer.cs">
+      <DependentUpon>202207150150399_mig_writer_image_size.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207151409134_mig_writer_status.cs" />
+    <Compile Include="Migrations\202207151409134_mig_writer_status.designer.cs">
+      <DependentUpon>202207151409134_mig_writer_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207151455560_mig_content_status.cs" />
+    <Compile Include="Migrations\202207151455560_mig_content_status.designer.cs">
+      <DependentUpon>202207151455560_mig_content_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207151458572_mig_heading_status.cs" />
+    <Compile Include="Migrations\202207151458572_mig_heading_status.designer.cs">
+      <DependentUpon>202207151458572_mig_heading_status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,6 +118,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202207131753090_writer_title_add.resx">
       <DependentUpon>202207131753090_writer_title_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207150150399_mig_writer_image_size.resx">
+      <DependentUpon>202207150150399_mig_writer_image_size.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207151409134_mig_writer_status.resx">
+      <DependentUpon>202207151409134_mig_writer_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207151455560_mig_content_status.resx">
+      <DependentUpon>202207151455560_mig_content_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207151458572_mig_heading_status.resx">
+      <DependentUpon>202207151458572_mig_heading_status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
