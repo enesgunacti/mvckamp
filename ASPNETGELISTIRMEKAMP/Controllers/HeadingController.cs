@@ -71,6 +71,7 @@ namespace ASPNETGELISTIRMEKAMP.Controllers
         public ActionResult DeleteHeading(int id)
         {
             var headingValue = headingManager.GetById(id);
+            headingValue.HeadingStatus = false;
             headingManager.HeadingDelete(headingValue);
             return RedirectToAction("Index");
         }

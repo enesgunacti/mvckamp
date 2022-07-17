@@ -12,14 +12,13 @@ namespace Entities.Concrete
         [Key]
         public int ContactId { get; set; }
 
-
         [StringLength(50)]
         public string UserName { get; set; }
-
 
         [StringLength(50)]
         public string UserMail { get; set; }
 
+        public DateTime CantactDate { get; set; }
 
         [StringLength(50)]
         public string Subject { get; set; }
